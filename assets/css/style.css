@@ -1,0 +1,54 @@
+body {
+    font-family: 'Lacquer', cursive;
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  .container {
+    margin: auto;
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+  
+  .jumbotron {
+    position: relative;
+    text-align: center;
+    background-color: #1f2937;
+    color: #22d3ee;
+    border-radius: 0;
+    border-bottom: 5px solid black;
+    box-shadow: 0 0 15px 2px #00acc2;
+    border-radius: 30px 30px 30px 30px;
+    margin: 1%;
+  }
+
+  .jumbotron:before, .jumbotron:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 35px 20px #777;
+  -moz-box-shadow: 0 35px 20px #777;
+  box-shadow: 0 35px 20px #777;
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+.effect5:after
+{
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+}
