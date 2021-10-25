@@ -1,16 +1,15 @@
-//Grab HTML Elements
 const TimeBlocksList = document.getElementById("TimeBlocksList");
 const CurrentDateP = document.getElementById("CurrentDateP");
 
-//Get Current Time and display it every second
+// Get Current Time and display it every second
 function GetTime() {
     var CurrentDate = moment().format('MMMM Do YYYY, h:mm:ss a');
-    CurrentDateP.innerHTML = CurrentDate;
+    CurrentDateP.innerHTML = CurrentDate;   
     CurrentDateP.innerHTML = "Current date: " + CurrentDate;
 }
 setInterval(GetTime, 1000);
 
-// Timeblocks
+// Temporary timeblocks
 let timeblocks = [
     "9 am",
     "10 am",
@@ -26,3 +25,60 @@ let timeblocks = [
     "8 pm",
     "9 pm"
 ]
+
+// Generate all the time blocks from the tomeblock array and display them
+GenerateTimeBlocks();
+function GenerateTimeBlocks() {
+    TimeBlocksList.innerHTML = "";
+
+    for (var i = 0; i < timeblocks.length; i++) {
+        var RowHour = timeblocks[i];
+
+        var row = document.createElement("div");
+        row.classList.add("row");
+        TimeBlocksList.appendChild(row);
+
+        var hour = document.createElement("div");
+        hour.innerHTML = RowHour;
+        hour.classList.add("hour");
+        row.appendChild(hour);
+
+        var textarea = document.createElement("textarea");
+        textarea.placeholder = "Enter your text here";
+        textarea.setAttribute("class", "description");
+        textarea.setAttribute("id", i);
+        row.appendChild(textarea);
+
+        var saveBtn = document.createElement("button");
+        saveBtn.textContent = "Save";
+        saveBtn.classList.add("saveBtn");
+        saveBtn.setAttribute("value", i);
+        row.appendChild(saveBtn);
+    }
+}
+
+// The update time block function that updates the color of the blocks.
+function UpdateTimeBlocks() {
+    var GetCurrentHR = moment().format('h a');
+    var CurrentHour = moment(GetCurrentHR, 'h a');
+    var Descriptions = document.getElementsByClassName('description')
+    
+    for (var i = 0; i < Descriptions.length; i++) {
+        var TimeBlock = moment(timeblocks[i], 'h a');
+        if (CurrentHour.isSame(TimeBlock) === true) {
+            Descriptions[i].classList.add('present')
+            Descriptions[i].classList.remove('future')
+            Descriptions[i].classList.remove('past')
+        } else if (CurrentHour.isBefore(TimeBlock) === true) {
+            Descriptions[i].classList.add('future')
+            Descriptions[i].classList.remove('past')
+            Descriptions[i].classList.remove('present')
+        } else if (CurrentHour.isBefore(TimeBlock) === false) {
+            Descriptions[i].classList.add('past')
+            Descriptions[i].classList.remove('future')
+            Descriptions[i].classList.remove('present')
+        }
+    }
+} 
+UpdateTimeBlocks()
+setInterval(UpdateTimeBlocks, 10000);

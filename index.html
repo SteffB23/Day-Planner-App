@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
-    <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">    
-    <!--Look for another FONT-->
-    <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
-    <title>Daily Planner App</title>
-</head>
-<body>
-    <header class="jumbotron">
-        <h1 class="display-3">Daily Planner</h1>
-        <p id="CurrentDateP" class="lead"></p>
-        <button class="clearBtn" onClick="ClearHistory()">Clear History</button>
-      </header>
-
-      <!-- Time Blocks Container -->
-      <!--inner.HTML-->
-    <div class="container">
-        <ul id="TimeBlocksList">
-        </ul>
-      </div>
-
-      <!-- Footer -->
-      <footer class="planner-footer">
-        <p>
-            <a class="footerli">&copy; 2021 Stephan Brookens</a>
-          </p>
-          <p>
-              <!--change text in JS to "E-Mail Me": innerHTML-->
-          Email: <a class="footerli" href="mailto:Sbrookens@gmail.com">Sbrookens@hotmail.com</a>
-          </p>
-          <p>
-            <a href="https://github.com/SteffB23" class="footerli">GitHub</a>
-          </p>
-          <p>
-            <a href="https://www.linkedin.com/in/stephan-brookens-9ba7796b/" class="footerli">LinkedIn</a>
-          </p>
-          <p>
-            <a href="https://steffb23.github.io/My-Web-Portfolio/Index" class="footerli">My Portfolio</a>
-          </p>
-      </footer>
-
-
-    <script src="/assets/moment/moment.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="script" href="assets/js/script.js"></script>
-</body>
+    <title>Daily Planner</title>
+  </head>
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Daily Planner App</h1>
+      <p id="CurrentDateP" class="lead"></p>
+      <button class="clearBtn" onClick="ClearHistory()">Clear History</button>
+    </header>
+    <!-- Time Blocks Container -->
+    <div class="container">
+      <ul id="TimeBlocksList">
+      </ul>
+    </div>
+    <!-- Footer -->
+    <footer class="PlannerFooter">
+      <p>
+          <a class="footerli">&copy; 2021 Stephan Brookens</a>
+        </p>
+        <p>
+        Email: <a class="footerli" href="mailto:Sbrookens@gotmail.com">Sbrookens@hotmail.com</a>
+        </p>
+        <p>
+          <a href="https://github.com/SteffB23" class="footerli">GitHub</a>
+        </p>
+        <p>
+          <a href="https://www.linkedin.com/in/stephan-brookens-9ba7796b/" class="footerli">LinkedIn</a>
+        </p>
+        <p>
+          <a href="https://github.com/SteffB23/My-Web-Portfolio/" class="footerli">My Web Portfolio</a>
+        </p>
+        <i class="i"><img src="https://avatars.githubusercontent.com/u/87339278?v=4" alt="My avatar"></i> 
+        <a href="https://github.com/SteffB23" target="blank">
+            </a>
+        
+    </footer>
+    <!-- Scripts -->
+    <script src="assets/moment/moment.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  </body>
 </html>
