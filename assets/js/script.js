@@ -57,6 +57,13 @@ function GenerateTimeBlocks() {
     }
 }
 
+// The save button function that allows the user to save their notes.
+$(document).on('click','.saveBtn',function(){
+    var SaveBtnValue = $(this).val();
+    var desctiption = document.getElementById(SaveBtnValue).value;
+    localStorage.setItem(SaveBtnValue, desctiption);
+});
+
 // The update time block function that updates the color of the blocks.
 function UpdateTimeBlocks() {
     var GetCurrentHR = moment().format('h a');
