@@ -64,6 +64,23 @@ $(document).on('click','.saveBtn',function(){
     localStorage.setItem(SaveBtnValue, desctiption);
 });
 
+//Clear history function to clear all the clear inputs and restore them to their default value
+//work on fix
+function ClearHistory() {
+    var ConfirmClearHistory = confirm("Do you want to permanently erase all of your notes?")
+    var Descriptions = document.querySelector('description')
+
+    if (ConfirmClearHistory === true) {
+        for (var i = 0; i < Descriptions.length; i++) {
+            localStorage.removeItem(i);
+            
+        }
+        Descriptions.innerText = "";
+        GenerateTimeBlocks();
+        UpdateTimeBlocks();
+        
+    }
+}
 // The update time block function that updates the color of the blocks.
 function UpdateTimeBlocks() {
     var GetCurrentHR = moment().format('h a');
