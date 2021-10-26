@@ -1,3 +1,11 @@
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+  
+}
+
+
 body {
     background: radial-gradient(circle at 10% 20%, rgb(39, 199, 171) 0%, rgb(70, 143, 197) 90%);
     font-family: 'Open Sans', sans-serif;
@@ -102,17 +110,17 @@ body {
   }
   
   .saveBtn:hover, .clearBtn:hover {
-    font-size: 20px;
-    transition: all .3s ease-in-out;
-  }
+      animation: pulse 1s infinite;
+      animation-timing-function: linear;   
+    }
   
   .past {
-    background-color: #d3d3d3;
-    color: white;
+    background-color: #d1d5db;
+    color: black;
   }
   
   .present {
-    background-color: #ff6961;
+    background-color: #22d3ee;
     color: white;
   }
   
@@ -178,4 +186,6 @@ img{
     width: 75px;
     height: 75px;
     border-radius: 75px;
+    animation: pulse 1s infinite;
+    animation-timing-function: linear;       
 }
