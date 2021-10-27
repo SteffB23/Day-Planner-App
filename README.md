@@ -55,8 +55,8 @@ JQuery
 # Contribution Guidlines
 ``` 
 Direct link to site:
-<!--LINK TO PUBLISHED PRODUCT HERE-->
-<!--Link TO GIT REPOSITORY HERE-->
+https://steffb23.github.io/Day-Planner-App/
+<https://github.com/SteffB23/Day-Planner-App
 Copyright(c) 2021 by Stephan Brookens
 This software is licensed under MIT license.
 ```
