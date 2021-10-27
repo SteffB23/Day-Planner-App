@@ -80,6 +80,12 @@ function ClearHistory() {
         
     }
 }
+
+// The get stored notes function that gets the stored notes and loads them when the page is loaded.
+function GetStoredNotes() {
+
+}
+
 // The update time block function that updates the color of the blocks.
 function UpdateTimeBlocks() {
     var GetCurrentHR = moment().format('h a');
