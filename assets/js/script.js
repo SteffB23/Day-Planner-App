@@ -65,11 +65,10 @@ $(document).on('click','.saveBtn',function(){
 });
 
 //Clear history function to clear all the clear inputs and restore them to their default value
-//work on fix
+//FIXED!
 function ClearHistory() {
     var ConfirmClearHistory = confirm("Do you want to permanently erase all of your notes?")
-    var Descriptions = document.querySelector('description')
-
+    var Descriptions = document.getElementsByClassName('descriptions')
     if (ConfirmClearHistory === true) {
         for (var i = 0; i < Descriptions.length; i++) {
             localStorage.removeItem(i);
